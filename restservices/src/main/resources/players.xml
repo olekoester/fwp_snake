@@ -1,0 +1,19 @@
+<players>
+<player>
+  <highscore> 1</highscore>
+  <username>John</username>
+</player>
+ <player>
+  <highscore> 1</highscore>
+  <username>Snow</username>
+ </player>
+<player>
+ <highscore> 8</highscore>
+ <username>Noone</username>
+  </player>
+ <player>
+ <highscore> 10</highscore>
+   <username>Dragon</username>
+   </player>
+
+</players>
