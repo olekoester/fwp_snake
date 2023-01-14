@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  eureka-server:
+    image:  spring-cloud-netflix-example/eureka-server
+    hostname: eureka-server
+    ports:
+      - "8761:8761"
+  rest:
+    hostname: restservice
+    build:
+      context: restservices/
+      dockerfile: DOCKERFILE
+    ports:
+      - "8082:8082"
+  snake:
+    hostname: snakelogic
+    build:
+      context: snakelogic/
+      dockerfile: DOCKERFILE
+    ports:
+      - "8085:8085"
+  frontend:
+    hostname: frontend
+    build:
+      context: vueMicroservice/
+      dockerfile: DOCKERFILE
+    ports: 
+      - "8080:8080"
+
+volumes:
+  eureka-server:
+  rest:
+  snake:
+  frontend:
