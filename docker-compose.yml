@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  eureka-server:
+    hostname: eureka-server
+    build:
+      context: fwp_snake/Eureka/
+      dockerfile: DOCKERFILE
+    ports:
+      - "8761:8761"
+  rest:
+    hostname: restservice
+    build:
+      context: ../fwp_snake/restservices/
+      dockerfile: DOCKERFILE
+    ports:
+      - "8082:8082"
+  snake:
+    hostname: snakelogic
+    build:
+      context: ../fwp_snake/snakeLogic/
+      dockerfile: DOCKERFILE
+    ports:
+      - "8085:8085"
+  frontend:
+    hostname: ../fwp_snake/frontend/
+    build:
+      context: vueMicroservice/
+      dockerfile: DOCKERFILE
+    ports: 
+      - "8080:8080"
+    
