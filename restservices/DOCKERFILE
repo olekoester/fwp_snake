@@ -1,3 +1,3 @@
 FROM openjdk:17
-COPY target/*.jar assignment01-0.0.1-SNAPSHOT.jar  
-ENTRYPOINT ["java","-jar","/assignment01-0.0.1-SNAPSHOT.jar  "]
+COPY target/*.jar restservice-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/restservice-0.0.1-SNAPSHOT.jar"]

@@ -4,7 +4,7 @@ services:
   eureka-server:
     hostname: eureka-server
     build:
-      context: fwp_snake/Eureka/
+      context: ../fwp_snake/Eureka/
       dockerfile: DOCKERFILE
     ports:
       - "8761:8761"
@@ -15,6 +15,8 @@ services:
       dockerfile: DOCKERFILE
     ports:
       - "8082:8082"
+    depends_on:
+      - eureka-server
   snake:
     hostname: snakelogic
     build:
@@ -22,6 +24,8 @@ services:
       dockerfile: DOCKERFILE
     ports:
       - "8085:8085"
+    depends_on:
+      - eureka-server
   frontend:
     hostname: ../fwp_snake/frontend/
     build:
@@ -29,4 +33,6 @@ services:
       dockerfile: DOCKERFILE
     ports: 
       - "8080:8080"
+    depends_on:
+      - eureka-server
     

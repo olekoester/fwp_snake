@@ -9,10 +9,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>de.hbv</groupId>
-    <artifactId>assignment01</artifactId>
+    <artifactId>restservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>assignment01</name>
-    <description>assignment01</description>
+    <packaging>jar</packaging>
+    <name>restservice</name>
+    <description>restservice</description>
     <properties>
         <java.version>17</java.version>
         <repackage.classifier/>
